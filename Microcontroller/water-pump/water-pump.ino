@@ -42,7 +42,7 @@ const char* mqttQueueAktuator     = "Aktuator";
 const char* mqttQueueSensor       = "Sensor";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*
+/*7
  * Device parameter
  * -Guid -> Id Device (unique) you can generate from here (https://www.uuidgenerator.net/version1) 
  * -status device -> save last state from the pump is on or off (1 = on , 0 = off) 
@@ -50,9 +50,8 @@ const char* mqttQueueSensor       = "Sensor";
  * -mac device
  * 
  */
-const char* daviceGuid            = "3735ffa4-f729-11ea-adc1-0242ac120002"; //You can change this guid with your guid 
-String deviceStatus               = "0";
-int devicePin                     = D1;
+String deviceGuid                = "3735ffa4-f729-11ea-adc1-0242ac120002"; //You can change this guid with your guid 
+int devicePin                    = D1;
 
 
 /*
@@ -118,15 +117,52 @@ String mac2String(byte ar[]) {
  * Function for Get message payload from MQTT rabbit mq
  */
 void callback(char* topic, byte* payload, unsigned int length){
+  char message[5]; //variable for temp payload message
   Serial.print("Message arrived in topic: ");
   Serial.println(topic);
   Serial.print("Messagge :");
   for(int i = 0;i < length;i++){
     Serial.print((char)payload[i]);
+    message[i] = (char)payload[i]; //initiate value from payload to message variable
+    
   }
   Serial.println();
   Serial.println("-------------------------------");
+
   
+  String dataSoil = String(message); //convert message to string from char*
+  int triggerData = dataSoil.toInt(); //convert datasoil to int for trigger pump water relay
+
+
+  /*
+   * Status pump water
+   * Condition -> you must convert string to char because format publish must with char type format
+   */
+   
+  String pumpOff                   = String(deviceGuid + "#" + "0");
+  char statusPumpOff [50];
+  pumpOff.toCharArray(statusPumpOff, sizeof(statusPumpOff));
+  String pumpOn                    = String(deviceGuid + "#" + "1");
+  char statusPumpOn [50];
+  pumpOn.toCharArray(statusPumpOn, sizeof(statusPumpOn));
+
+  
+  /*SOIL MOISTURE PARAMETER
+   * DRY / KERING   >700 
+   * WET / LEMBAB   <350
+   * NORMAL         >350 AND <700
+   * This condition will trigger pump water relay is on or off and send status to MQTT
+   */
+
+
+  if (triggerData > 700){
+    client.publish(mqttQueueAktuator,statusPumpOn ); //format  publish ( char,char)
+    digitalWrite(devicePin,LOW);
+    delay(5000); 
+    client.publish(mqttQueueAktuator,statusPumpOff);
+    digitalWrite(devicePin,HIGH);
+    Serial.println(pumpOff);
+  }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
