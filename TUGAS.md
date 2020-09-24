@@ -53,5 +53,15 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
         - Lalu perrhatikan nilai yang ditunjukan avometer, jika ppada teganggan 3V, maka jarum avometer (analog) akan berada di angka 2 hingga 3, jika pada avometer digital akann menunjukan angka 2,5 hingga 3,3V.
             
       - Kalibrasi pada komponen soil moisture
-            Langkah-langkah  yang harus dilakukan ketika akan melakukan kalibrasi pada soil moisture adalah sebagai berkut:
-            - 
+       Langkah-langkah  yang harus dilakukan ketika akan melakukan kalibrasi pada soil moisture adalah sebagai berkut:
+        - Langkah pertama, ialah siapkan baterai sebagai sumber tegangan, avometer untuk mengecek tegangan pada sensor, dan sensor itu sendiri.
+        - Lalu pin VCC pada sensor dihubungkan pada kutub positif pada baterai dan pada probe positif (+) pada avometer (biasanya yang berwarna merah). Lalu untuk pin GND, hubungkan pada kutub negative pada baterai dan juga probe negative (-) pada avometer (biasanya berwarna hitam).
+        - Setelah terpasang dengan baik, set avometer pada DCv.
+        - Lalu perhatikan nilai yang ditunjukkan oleh avometer, rata-rata kisaran nilainya berada pada 1,3V hingga 1,5V.
+        
+       - Memasang wemos pada PCB
+            Setelah dilakukan kalibrasi, dan pastikan hasilnya sesuai, kemudian pasang wemos pada PCB yang telah disediakan. Hati-hati ketika melakukan pemasangan wemos pada PCB, pastikan pin nya sesuai. Setelah terpasang, lalu solder bagian-bagian yang terhubung, untuk memudahkan solder bagian pin yang dijadikan sebagai input, sumber tegangan dan ground. Tetapi, untuk menghindari kesalahan ketika program di run pada wemos, sebaiknya semua pin di solder, agar semua jalur terhubung dan tidak sulit ketika melakukan analisis.
+            
+            
+       
+            
