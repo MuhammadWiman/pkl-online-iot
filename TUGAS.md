@@ -12,7 +12,7 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
  
  **PANDUAN MERAKIT SOIL MOISTURE**
  1. Komponen yang dibutuhkan:
-    - Sensor soil moisture YL-69
+    - Sensor soil moisture FC-28
     
     ![image](https://user-images.githubusercontent.com/18458955/94101022-38fef980-fe59-11ea-9c25-cd27c81c8872.png)
 
@@ -33,3 +33,19 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
     - Adaptor usb 5v 1-2A 
     
     ![](https://www.jakartanotebook.com/images/products/14/63/7501/3/travel-adapter-charge-5v-20a-for-samsung-galaxy-note-ii-white-2.jpg)
+   
+   
+  2. Langkah-langkah merakit:
+  
+     - Wiring komponen seperi berikut :
+     
+     ![sooil moisture](https://user-images.githubusercontent.com/18458955/94108775-1c1ef200-fe6a-11ea-9abd-34e59751b45c.png)
+
+     - Lakukan Kalibrasi
+       Setelah melakukan perakitan pada senssor moisture dan wemos , sebbaiknya dilakukan kalibrasi terlebih dahulu pada komponen untuk mencegah penggunaan komponen yang rusak serta memudahkan untuk melakukan annallissa jika tejadi kesalahan.
+       - Kalibrasi pada wemooss D1 Mini
+            Langkah-langkah yang harus dilakukan ketika akan melakukan kalibrasi pada wemos adalah sebagai berikut:
+            - Pastikan pin male  telah terpasang dan tidak saling terhubung nat pinnya.
+            - Siapkan avometer , analog / digital.
+            - Seiapkan kabel adapter / kabel usb yanng akan digunakan sebagai sumbber tegangan wemos dan sebagai uploader program wemos.
+            - Setelah semua komponen siap, maka hubungkan kabel charger pada wemos board, lalu 
