@@ -43,15 +43,15 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
 
      - Lakukan Kalibrasi
        Setelah melakukan perakitan pada senssor moisture dan wemos , sebbaiknya dilakukan kalibrasi terlebih dahulu pada komponen untuk mencegah penggunaan komponen yang rusak serta memudahkan untuk melakukan annallissa jika tejadi kesalahan.
-       - Kalibrasi pada wemooss D1 Mini
-            Langkah-langkah yang harus dilakukan ketika akan melakukan kalibrasi pada wemos adalah sebagai berikut:
-            - Pastikan pin male  telah terpasang dan tidak saling terhubung nat pinnya.
-            - Siapkan avometer , analog / digital.
-            - Seiapkan kabel adapter / kabel usb yanng akan digunakan sebagai sumbber tegangan wemos dan sebagai uploader program wemos.
-            - Setelah semua komponen siap, maka hubungkan kabel charger pada wemos board, lalu hubungkan probe (+) pada avometer ke pin tegangan(yangg 5V atau 3V) kemudian nprboe negatif (-) pada avometer ke pin ground.
-            - Setelah tepasang, nyalakan avometer, pasang ke posisi teggangann , pastikan sebelum digunakan, avometer pun sudah dilakukan kalibrasi.
-            - Lalu perrhatikan nilai yang ditunjukan avometer, jika ppada teganggan 3V, maka jarum avometer (analog) akan berada di angka 2 hingga 3, jika pada avometer digital akann menunjukan angka 2,5 hingga 3,3V.
+      - Kalibrasi pada wemos D1 Mini
+       Langkah-langkah yang harus dilakukan ketika akan melakukan kalibrasi pada wemos adalah sebagai berikut:
+        - Pastikan pin male  telah terpasang dan tidak saling terhubung nat pinnya.
+        - Siapkan avometer , analog / digital.
+        - Siapkan kabel adapter / kabel usb yanng akan digunakan sebagai sumbber tegangan wemos dan sebagai uploader program wemos.
+        - Setelah semua komponen siap, maka hubungkan kabel charger pada wemos board, lalu hubungkan probe (+) pada avometer ke pin tegangan(yangg 5V atau 3V) kemudian probe negatif (-) pada avometer ke pin ground.
+        - Setelah tepasang, nyalakan avometer, pasang ke posisi teggangann , pastikan sebelum digunakan, avometer pun sudah dilakukan kalibrasi.
+        - Lalu perrhatikan nilai yang ditunjukan avometer, jika ppada teganggan 3V, maka jarum avometer (analog) akan berada di angka 2 hingga 3, jika pada avometer digital akann menunjukan angka 2,5 hingga 3,3V.
             
-       - Kalibrasi pada komponen soil moisture
+      - Kalibrasi pada komponen soil moisture
             Langkah-langkah  yang harus dilakukan ketika akan melakukan kalibrasi pada soil moisture adalah sebagai berkut:
             - 
