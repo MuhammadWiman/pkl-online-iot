@@ -84,7 +84,7 @@ Proses pemasangan, sambungkan  kabel jumper female ke pin soil sesuai denggan sk
         - Pengujian Sooil Moisture
           Pada tahap ini, proses perakitan telah selesai dilakukan dan siap untuk melakukan pengujian dengan cara memasang soil moisture pada tanah untuk kemudian perhatikan nilai yang didapat oleh sensor, apakah sesuai atau tidak dengan program yang sebelumnya telah dibuat.
 Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial monitor arduino IDE.
-          ![](https://drive.google.com/file/d/1XTfpSAnyI0w0nNSQ30Bz9QU4fxx0ecy0/view?usp=sharing)
+          ![fvfdghg](/home/nurman/Pictures/Screenshot from 2020-09-28 11-38-48.png)
        
        
            
