@@ -61,6 +61,38 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
         
        - Memasang wemos pada PCB
             Setelah dilakukan kalibrasi, dan pastikan hasilnya sesuai, kemudian pasang wemos pada PCB yang telah disediakan. Hati-hati ketika melakukan pemasangan wemos pada PCB, pastikan pin nya sesuai. Setelah terpasang, lalu solder bagian-bagian yang terhubung, untuk memudahkan solder bagian pin yang dijadikan sebagai input, sumber tegangan dan ground. Tetapi, untuk menghindari kesalahan ketika program di run pada wemos, sebaiknya semua pin di solder, agar semua jalur terhubung dan tidak sulit ketika melakukan analisis.
+            ![image](https://user-images.githubusercontent.com/18458955/94388790-40374780-0178-11eb-888a-2686de828357.png)
+            
+       - Memasang soil sensor pada PCB
+       
+            **IKUTI SKEMA WIRING** ==> [Skema Wiring](https://user-images.githubusercontent.com/18458955/94108775-1c1ef200-fe6a-11ea-9abd-34e59751b45c.png)
+            
+            Pada soil sensor terdapat 6 pin, yang terbagi pada dua sisi, dengan 2 pin sebagai pin inputan untuk mendeteksi kelembaban. Pada sisi lainnya, terdapat 4 pin, yakni pin VCC (input tegangan), GND (input ground), D0 (digital out untuk digital output), dan AO (analog out untuk analog output). Pin VCC dan GND dipasang pada pin yang sesuai pada PCB. Untuk VCC pasang pada tegangan 5V dan GND pasang pada ground. 
+Proses pemasangan, sambungkan  kabel jumper female ke pin soil sesuai denggan skema. Kemudian untuk DO dipasang pada pin () pada PCB dan AO pada pin AO di PCB. 
+            ![](https://www.circuitstoday.com/wp-content/uploads/2017/03/Pin-out.jpg)
+            ![](https://cf.shopee.co.id/file/5fc160e882d3b7c741788f8502149ddb)
+       - Memasang soil sensor pada PC
+           Sambungkan kabel data / kabel usb ke usb hub pada wemos 
+           ![](https://devonhubner.org/pix/wemos_d1_mini_usb_connected_for_flashing.jpg)
+       - Input Program
+           Setelah proses perakitan selesai, input program pada wemos, kemudian lakukan running dan cek apakah alat bekerja dengan baik atau tidak.
+           ikuti [Program](https://github.com/pptik/pkl-online-iot/tree/master/Microcontroller/Tahap-1-Serial-Monitor/soil-moisture-serial) berikut!
+           Program menggunakan : 
+           - Arduinno IDE [Download](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.13-windows.exe)
+           - ESP8266 Board Library, Cara install dapat dilihat [Disini](https://kelasrobot.com/2-cara-sukses-pasang-install-board-esp8226-ke-arduino-ide/)
+           Setelah alikasi dan library di siapkan, jalankan program yang telah di [Download](https://github.com/pptik/pkl-online-iot/blob/master/Microcontroller/Tahap-1-Serial-Monitor/soil-moisture-serial/soil-moisture-serial.ino). Dan lakukan eksekusi program. Sebelum eksekusi program lakukan set up pada Arduino IDE untuk untuk wemos D1 Mini denggan melihat [Tutorial](http://www.jogjarobotika.com/blog/tutorial-install-wemos-pada-arduino-ide-b135.html)
+        - Pengujian Sooil Moisture
+          Pada tahap ini, proses perakitan telah selesai dilakukan dan siap untuk melakukan pengujian dengan cara memasang soil moisture pada tanah untuk kemudian perhatikan nilai yang didapat oleh sensor, apakah sesuai atau tidak dengan program yang sebelumnya telah dibuat.
+Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial monitor arduino IDE.
+          ![fvfdghg](/home/nurman/Pictures/Screenshot from 2020-09-28 11-38-48.png)
+       
+       
+           
+           
+        
+        
+            
+        
             
             
        
