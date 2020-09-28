@@ -83,10 +83,19 @@ Proses pemasangan, sambungkan  kabel jumper female ke pin soil sesuai denggan sk
            Setelah alikasi dan library di siapkan, jalankan program yang telah di [Download](https://github.com/pptik/pkl-online-iot/blob/master/Microcontroller/Tahap-1-Serial-Monitor/soil-moisture-serial/soil-moisture-serial.ino). Dan lakukan eksekusi program. Sebelum eksekusi program lakukan set up pada Arduino IDE untuk untuk wemos D1 Mini denggan melihat [Tutorial](http://www.jogjarobotika.com/blog/tutorial-install-wemos-pada-arduino-ide-b135.html)
         - Pengujian Sooil Moisture
           Pada tahap ini, proses perakitan telah selesai dilakukan dan siap untuk melakukan pengujian dengan cara memasang soil moisture pada tanah untuk kemudian perhatikan nilai yang didapat oleh sensor, apakah sesuai atau tidak dengan program yang sebelumnya telah dibuat.
-Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial monitor arduino IDE.
-          ![fvfdghg](/home/nurman/Pictures/Screenshot from 2020-09-28 11-38-48.png)
-       
-       
+Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial monitor arduino IDE. **PASTIKAN SERIAL DI SET 115200**
+          ![](/Images/serial-monitor-soil.png)
+          Contoh implementasi di tanah: 
+          ![](/Images/implementasi-soil.jpg)
+          
+
+ # TUGAS 1
+  
+  - [x] Buat Rangkaian soil moisture
+  - [x] Tampilkan Data Soil moisture di serial monitor
+  - [x] Buat buku panduan versi sendiri dalam bentuk tutorial **video** dan **dokumen**
+    - [x] Video harus menjelaskan urutan pembuatan/perakitan soil moisture dari awal sampai akhir
+    - [x] Dokumen harus menjelaskan menjelaskan urutan pembuatan/perakitan soil moisture dari awal sampai akhir (**tampilkan screenshoot**). **Format doc/docx/pdf**
            
            
         
