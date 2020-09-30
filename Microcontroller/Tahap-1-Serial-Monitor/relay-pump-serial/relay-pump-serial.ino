@@ -21,7 +21,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/*7
+/*
  * Device parameter
  * -Guid -> Id Device (unique) you can generate from here (https://www.uuidgenerator.net/version1) 
  * -status device -> save last state from the pump is on or off (1 = on , 0 = off) 
