@@ -87,6 +87,7 @@ Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial mon
           ![](/Images/serial-monitor-soil.png)
           Contoh implementasi di tanah: 
           ![](/Images/implementasi-soil.jpg)
+          Untuk lebih lengkapnya dapat di lihat di [Video Perakitan](http://forum.pptik.id/showthread.php?tid=703)
           
 
  # TUGAS 1
