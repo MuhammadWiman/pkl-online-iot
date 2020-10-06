@@ -13,6 +13,7 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
  **PANDUAN MERAKIT RELAY WATER PUMP**
  1. Komponen yang dibutuhkan:
     - Relay module (Yang akan digunakan 1 channel)
+      ![image](https://ecs7.tokopedia.net/img/cache/700/product-1/2017/9/30/4346518/4346518_cdeaadda-91f9-423a-a522-39363131b487_640_640.jpg)
     - Node MCU LOLIN (ESP8266)
     - Submersible water pump mini DC 5v
     - PCB bolong / PCB Jadi
@@ -20,7 +21,6 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
     - Kabel data usb micro (Kabel harus bisa mengirimkan data bukan hanya power)
     - Adaptor usb 5v 1-2A 
     - Kabel jumper female-female
-    - 
 
  2. Langkah-langkah merakit
       -  Lakukan pemasangan pin pada wemos
