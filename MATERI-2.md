@@ -28,7 +28,7 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
     - Kabel data usb micro (Kabel harus bisa mengirimkan data bukan hanya power)
     - Adaptor usb 5v 1-2A 
     - Kabel jumper female-female
-    
+
       ![](https://s1.bukalapak.com/img/134621537/w-1000/Kabel_Jumper_Female___Female_Breadboard_Arduino_Wire_Sensor_.jpg)
 
 
@@ -46,3 +46,15 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
       -  Input program
          Setelah pompa terpasang dan dipastikan terhubung dengan wemos dan relay, maka langkah selanjutnya ialah melakukan upload program pada wemos untuk kemudian melakukan uji coba apakah rangkaian yang dibuat telah sesuai dan terhubung juga pompa dapat bekerja dengan baik atau tidak. 
          Source code untuk pompa dapat diakses pada link berikut:
+
+
+
+
+
+ # TUGAS 2
+  
+  - [x] Buat Rangkaian Relay Water Pump
+  - [x] Tampilkan Data/Status Relay Water Pump di serial monitor
+  - [x] Buat buku panduan versi sendiri dalam bentuk tutorial **video** dan **dokumen**
+    - [x] Video harus menjelaskan urutan pembuatan/perakitan Relay Water Pump dari awal sampai akhir
+    - [x] Dokumen harus menjelaskan menjelaskan urutan pembuatan/perakitan Relay Eater Pump dari awal sampai akhir (**tampilkan screenshoot**). **Format doc/docx/pdf**
