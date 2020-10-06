@@ -14,10 +14,13 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
  1. Komponen yang dibutuhkan:
     - Relay module (Yang akan digunakan 1 channel)
       ![image](https://ecs7.tokopedia.net/img/cache/700/product-1/2017/9/30/4346518/4346518_cdeaadda-91f9-423a-a522-39363131b487_640_640.jpg)
+
     - Node MCU LOLIN (ESP8266)
       ![image](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSC5tbxGBMb41OhqELPso3nOClE2iBtVekhQ&usqp=CAU)
+
     - Submersible water pump mini DC 5v
       ![image](https://muthuslogic.com/wp-content/uploads/2020/07/Mini-Submersible-Pump.jpg)
+      
     - PCB bolong / PCB Jadi
     - Box (Opsional)
     - Kabel data usb micro (Kabel harus bisa mengirimkan data bukan hanya power)
