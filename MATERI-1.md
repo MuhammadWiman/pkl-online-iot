@@ -81,7 +81,7 @@ Proses pemasangan, sambungkan  kabel jumper female ke pin soil sesuai denggan sk
            - Arduinno IDE [Download](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.13-windows.exe)
            - ESP8266 Board Library, Cara install dapat dilihat [Disini](https://kelasrobot.com/2-cara-sukses-pasang-install-board-esp8226-ke-arduino-ide/)
            Setelah alikasi dan library di siapkan, jalankan program yang telah di [Download](https://github.com/pptik/pkl-online-iot/blob/master/Microcontroller/Tahap-1-Serial-Monitor/soil-moisture-serial/soil-moisture-serial.ino). Dan lakukan eksekusi program. Sebelum eksekusi program lakukan set up pada Arduino IDE untuk untuk wemos D1 Mini denggan melihat [Tutorial](http://www.jogjarobotika.com/blog/tutorial-install-wemos-pada-arduino-ide-b135.html)
-        - Pengujian Sooil Moisture
+        - Pengujian Soil Moisture
           Pada tahap ini, proses perakitan telah selesai dilakukan dan siap untuk melakukan pengujian dengan cara memasang soil moisture pada tanah untuk kemudian perhatikan nilai yang didapat oleh sensor, apakah sesuai atau tidak dengan program yang sebelumnya telah dibuat.
 Berikut contoh data yang dihasilkan oleh sensor yang ditampilkan pada serial monitor arduino IDE. **PASTIKAN SERIAL DI SET 115200**
           ![](/Images/serial-monitor-soil.png)
