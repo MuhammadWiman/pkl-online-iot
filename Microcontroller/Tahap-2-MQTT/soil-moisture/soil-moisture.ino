@@ -36,8 +36,6 @@ const char* mqttHost              = "rmq2.pptik.id";
 const char* mqttUserName          = "/smkmerdekabandung:smkmerdekabandung";
 const char* mqttPassword          = "qwerty";
 //const char* mqttClient            = "IOT-Water-Pumpp";
-const char* mqttQueueLog          = "Log";
-const char* mqttQueueAktuator     = "Aktuator";
 const char* mqttQueueSensor       = "Sensor";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -176,27 +174,19 @@ void setup()
  * This functioon for loop your program
  */
 void loop() {
-  //if you disconnected from wifi and mqttu
+  //if you disconnected from wifi and mqtt
   if (!client.connected()) {
     reconnect();
   }
 
  const int valueSoil = analogRead(devicePin);
  const int dataSoil  = valueSoil;
-//Data to Mobile 
- String dataSoilMobile= String(deviceGuid + "#" + dataSoil);
- char dataToMobile[50];
- dataSoilMobile.toCharArray(dataToMobile, sizeof(dataToMobile));
- client.publish(mqttQueueLog,dataToMobile);
 
- //Data to Pump water
+ //Data to MQTT
  String dataSoilPump = String(dataSoil);
  char dataToPump[5];
  dataSoilPump.toCharArray(dataToPump, sizeof(dataToPump));
  client.publish(mqttQueueSensor,dataToPump);
-
- 
-
   client.loop();
   delay(10000);
 }

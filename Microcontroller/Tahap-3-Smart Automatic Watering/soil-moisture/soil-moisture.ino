@@ -2,13 +2,12 @@
  *  PLEASE DONT DELETE AND EDIT 
  *  Develop by          : Nurman Hariyanto
  *  Email               : nurman.hariyanto13@gmail.com
- *  Project             : PKL-ONLINE Relay Water Pump
+ *  Project             : PKL-ONLINE Soil Moisture
  *  Version             : 1.0
- *  Description         : This code trigger water pump turn on/off from message payload rabbitmq
+ *  Description         : This code for get data from soil moisture and send data soil to MQTT/RMQ
  *  Microcontroller     : Wemos Mini ESP8266
  *                        NodeMCU ESP8266
- *  Device              : Relay Module 1 Channel
- *                        Water pump A3 waterproof                     
+ *  Device              : Soil Moisture Sensor Module                   
  */
 
 
@@ -37,7 +36,9 @@ const char* mqttHost              = "rmq2.pptik.id";
 const char* mqttUserName          = "/smkmerdekabandung:smkmerdekabandung";
 const char* mqttPassword          = "qwerty";
 //const char* mqttClient            = "IOT-Water-Pumpp";
+const char* mqttQueueLog          = "Log";
 const char* mqttQueueAktuator     = "Aktuator";
+const char* mqttQueueSensor       = "Sensor";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*7
@@ -48,8 +49,8 @@ const char* mqttQueueAktuator     = "Aktuator";
  * -mac device
  * 
  */
-String deviceGuid                = "3735ffa4-f729-11ea-adc1-0242ac120002"; //You can change this guid with your guid 
-int devicePin                    = D1;
+String deviceGuid                = "8d346f0e-0f83-43eb-b5d9-c2d1ca5bbeeb"; //You can change this guid with your guid 
+int devicePin                    = A0;
 
 
 /*
@@ -115,12 +116,16 @@ String mac2String(byte ar[]) {
  * Function for Get message payload from MQTT rabbit mq
  */
 void callback(char* topic, byte* payload, unsigned int length){
+  char message[5]; //variable for temp payload message
+  Serial.print("Message arrived in topic: ");
+  Serial.println(topic);
+  Serial.print("Messagge :");
+  for(int i = 0;i < length;i++){
+    Serial.print((char)payload[i]);
+    message[i] = (char)payload[i]; //initiate value from payload to message variable
+    
+  }
   
-  Serial.println();
-
-
-
-
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -156,11 +161,7 @@ void reconnect() {
  */
 void setup()
 {
-  pinMode(devicePin, OUTPUT);
-
-  digitalWrite(devicePin, HIGH);
-
-  //pinMode(input, INPUT);
+  pinMode(devicePin, INPUT);
   Serial.begin(115200);
   setup_wifi();
   printMACAddress();
@@ -175,35 +176,28 @@ void setup()
  * This functioon for loop your program
  */
 void loop() {
-  //if you disconnected from wifi and mqtt
+  //if you disconnected from wifi and mqttu
   if (!client.connected()) {
     reconnect();
   }
-  digitalWrite(devicePin,HIGH); //turn the relay on
-  String pumpOn                    = String(deviceGuid + "#" + "1");
-  char statusPumpOn [50];
-  pumpOn.toCharArray(statusPumpOn, sizeof(statusPumpOn));
-  client.publish(mqttAktuator,statusPumpOn );
-  delay(5000); //wait for 5 seconds
 
-  
-  digitalWrite(devicePin,LOW); //turn the relay off
-  String pumpOff                   = String(deviceGuid + "#" + "0");
-  char statusPumpOff [50];
-  pumpOff.toCharArray(statusPumpOff, sizeof(statusPumpOff));
-  client.publish(mqttAktuator,statusPumpOff );
-  delay(5000); //wait for 5 seconds
-  
-  client.loop();
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ const int valueSoil = analogRead(devicePin);
+ const int dataSoil  = valueSoil;
+//Data to Mobile 
+ String dataSoilMobile= String(deviceGuid + "#" + dataSoil);
+ char dataToMobile[50];
+ dataSoilMobile.toCharArray(dataToMobile, sizeof(dataToMobile));
+ client.publish(mqttQueueLog,dataToMobile);
 
-
-
-
-
-
-
-
+ //Data to Pump water
+ String dataSoilPump = String(dataSoil);
+ char dataToPump[5];
+ dataSoilPump.toCharArray(dataToPump, sizeof(dataToPump));
+ client.publish(mqttQueueSensor,dataToPump);
 
  
+
+  client.loop();
+  delay(10000);
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
