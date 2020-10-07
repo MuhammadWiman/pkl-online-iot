@@ -181,10 +181,9 @@ void loop() {
 
  const int valueSoil = analogRead(devicePin);
  const int dataSoil  = valueSoil;
-
- //Data to MQTT
- String dataSoilPump = String(dataSoil);
- char dataToPump[5];
+//Data to MQTT
+ String dataSoilPump= String(deviceGuid + "#" + dataSoil);
+ char dataToPump[50];
  dataSoilPump.toCharArray(dataToPump, sizeof(dataToPump));
  client.publish(mqttQueueSensor,dataToPump);
   client.loop();
