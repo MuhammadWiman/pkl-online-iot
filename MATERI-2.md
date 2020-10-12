@@ -46,6 +46,7 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
       -  Input program
          Setelah pompa terpasang dan dipastikan terhubung dengan wemos dan relay, maka langkah selanjutnya ialah melakukan upload program pada wemos untuk kemudian melakukan uji coba apakah rangkaian yang dibuat telah sesuai dan terhubung juga pompa dapat bekerja dengan baik atau tidak. 
          Source code untuk pompa dapat diakses pada link berikut:
+      
 
 
 
@@ -57,4 +58,4 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
   - [x] Tampilkan Data/Status Relay Water Pump di serial monitor
   - [x] Buat buku panduan versi sendiri dalam bentuk tutorial **video** dan **dokumen**
     - [x] Video harus menjelaskan urutan pembuatan/perakitan Relay Water Pump dari awal sampai akhir
-    - [x] Dokumen harus menjelaskan menjelaskan urutan pembuatan/perakitan Relay Eater Pump dari awal sampai akhir (**tampilkan screenshoot**). **Format doc/docx/pdf**
+    - [x] Dokumen harus menjelaskan menjelaskan urutan pembuatan/perakitan Relay Eater Pump dari awal s ampai akhir (**tampilkan screenshoot**). **Format doc/docx/pdf**
