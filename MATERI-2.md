@@ -33,6 +33,7 @@ Ada dua tahap yang akan dilakukan dalam merakit soil moisture dan pompa air yait
 
 
  2. Langkah-langkah merakit
+ 
     Skema wiring : 
     ![image](https://github.com/pptik/pkl-online-iot/blob/master/Images/skema-relay.png)
       -  Lakukan pemasangan pin pada wemos
