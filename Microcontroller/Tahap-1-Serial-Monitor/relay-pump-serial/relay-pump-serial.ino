@@ -38,7 +38,6 @@ void setup(){
 
 
 void loop(){
-  int dataSoil= analogRead(devicePin);
   Serial.print("Device ID :");
   Serial.println(deviceGuid);
   Serial.print("Status : ");
