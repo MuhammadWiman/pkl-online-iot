@@ -183,9 +183,9 @@ void loop() {
   String pumpOn                    = String(deviceGuid + "#" + "1");
   char statusPumpOn [50];
   pumpOn.toCharArray(statusPumpOn, sizeof(statusPumpOn));
-  Serial.print("Device ID :");
+  Serial.println("Device ID :");
   Serial.println(deviceGuid);
-  Serial.print("Status Pompa: ON");
+  Serial.println("Status Pompa: ON");
   client.publish(mqttQueueAktuator,statusPumpOn );
   delay(5000); //wait for 5 seconds
 
@@ -194,7 +194,7 @@ void loop() {
   String pumpOff                   = String(deviceGuid + "#" + "0");
   char statusPumpOff [50];
   pumpOff.toCharArray(statusPumpOff, sizeof(statusPumpOff));
-  Serial.print("Device ID :");
+  Serial.println("Device ID :");
   Serial.println(deviceGuid);
   Serial.print("Status Pompa: OFF");
   client.publish(mqttQueueAktuator,statusPumpOff );
